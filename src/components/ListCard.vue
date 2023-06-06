@@ -20,8 +20,10 @@ export default {
 </script>
 <template>
     <div class="container">
-        <AppResult />
-        <Card v-for="card in store.ListCard" :details="card" />
+        <div class="row">
+            <AppResult />
+            <Card v-for="card in store.ListCard" :details="card" />
+        </div>
     </div>
 </template>
 <style lang="scss" scoped>
@@ -32,9 +34,16 @@ export default {
     background-color: $white;
     width: 90%;
     margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+
+    .row {
+        width: 92%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+
+    }
 
 
 }

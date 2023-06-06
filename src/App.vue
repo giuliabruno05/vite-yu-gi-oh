@@ -29,7 +29,7 @@ export default {
 
       if (store.searchText !== "") {
         myURL = `https://db.ygoprodeck.com/api/v7/cardinfo.php?${store.apiArchetypeParameter}=${store.searchText}`
-        console.log(store.apiArchetypeParameter);
+
       }
 
 
@@ -48,7 +48,7 @@ export default {
         .then(results => {
           let archetype = results.data
           store.ListArchetype = archetype
-          console.log(archetype);
+
         })
     }
   },

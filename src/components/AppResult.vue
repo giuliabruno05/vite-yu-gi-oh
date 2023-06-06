@@ -21,6 +21,7 @@ export default {
     height: 40px;
     background-color: black;
     width: 100%;
+    margin-top: 35px;
 
 
     h4 {

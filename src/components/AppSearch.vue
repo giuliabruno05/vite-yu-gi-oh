@@ -11,8 +11,8 @@ export default {
 </script>
 <template>
     <select v-model="store.searchText">
-        <option v-for="option in store.ListArchetype" @click="$emit('search')" :value="option.archetype_name
-        ">{{ option.archetype_name }}
+        <option v-for="option in store.ListArchetype" @click="$emit('search')" :value="option.archetype_name">
+            {{ option.archetype_name }}
         </option>
     </select>
 </template>

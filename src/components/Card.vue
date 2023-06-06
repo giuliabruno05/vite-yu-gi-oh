@@ -21,7 +21,7 @@ export default {
 
 .card {
     width: 17%;
-    margin: 20px 15px;
+    margin-bottom: 20px;
     background-color: $main-color;
 
 
