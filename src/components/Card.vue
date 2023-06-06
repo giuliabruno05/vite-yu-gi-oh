@@ -11,7 +11,8 @@ export default {
         <div class="details-card">
             <div><img :src="details.card_images[0].image_url" alt=""></div>
             <h4>{{ details.name }}</h4>
-            <p>{{ details.archetype }}</p>
+            <p v-if="details.archetype">{{ details.archetype }}</p>
+            <p v-else>Other</p>
         </div>
     </div>
 </template>
@@ -25,7 +26,7 @@ export default {
 
 
     .details-card {
-        padding: 10px;
+
         text-align: center;
 
         h4 {
@@ -34,6 +35,10 @@ export default {
             margin-bottom: 5px;
             text-transform: uppercase;
             font-size: 0.8rem;
+        }
+
+        p {
+            margin-bottom: 10px;
         }
     }
 
