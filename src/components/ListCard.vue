@@ -1,12 +1,15 @@
 <script>
 import { store } from './../store.js'
 import Card from './Card.vue'
+import AppResult from './AppResult.vue'
 
 export default {
     name: "ListCard",
 
+
     components: {
-        Card
+        Card,
+        AppResult
     },
     data() {
         return {
@@ -17,9 +20,7 @@ export default {
 </script>
 <template>
     <div class="container">
-        <div class="row-search">
-            <h4>Found 15 cards</h4>
-        </div>
+        <AppResult />
         <Card v-for="card in store.ListCard" :details="card" />
     </div>
 </template>
@@ -35,19 +36,6 @@ export default {
     flex-wrap: wrap;
     justify-content: space-around;
 
-    .row-search {
-        height: 40px;
-        background-color: black;
-        width: 100%;
 
-
-        h4 {
-            color: $white;
-            line-height: 40px;
-            vertical-align: middle;
-            margin-left: 10px;
-            font-size: 0.8rem;
-        }
-    }
 }
 </style>

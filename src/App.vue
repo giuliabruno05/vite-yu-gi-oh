@@ -8,12 +8,14 @@ import AppSearch from './components/AppSearch.vue'
 
 
 
+
 export default {
   components: {
     AppHeader,
     ListCard,
     AppLoader,
     AppSearch
+
   },
   data() {
     return {
