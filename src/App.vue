@@ -25,8 +25,13 @@ export default {
 
       let myURL = store.apiURL;
 
+      if (store.searchText !== "") {
+        myURL = `https://db.ygoprodeck.com/api/v7/cardinfo.php?${store.apiArchetypeParameter}=${store.searchText}`
+        console.log(store.apiArchetypeParameter);
+      }
 
-      axios.get(store.apiURL)
+
+      axios.get(myURL)
         .then(results => {
           store.ListCard = results.data.data
           store.loading = false
